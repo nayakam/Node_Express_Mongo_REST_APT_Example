@@ -1,5 +1,5 @@
 {
-  "name": "shipit",
+  "name": "student_log",
   "version": "1.0.0",
   "description": "API",
   "main": "index.js",
@@ -12,5 +12,14 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "mongoose": "^4.4.19"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://nayakam@github.com/nayakam/Node_Express_Mongo_REST_APT_Example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nayakam/Node_Express_Mongo_REST_APT_Example/issues"
+  },
+  "homepage": "https://github.com/nayakam/Node_Express_Mongo_REST_APT_Example#readme"
 }

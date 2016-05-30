@@ -64,3 +64,10 @@ Sample:
 http://localhost:3000/api/student?studentNo=$param
 Response:
 Status : 200
+
+
+https://docs.npmjs.com/getting-started/using-a-package.json
+http://expressjs.com/en/starter/installing.html
+http://www.2ality.com/2016/01/locally-installed-npm-executables.html
+
+
