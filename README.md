@@ -57,7 +57,15 @@ Useful Commands
     --Show all the config settings.
     npm config list
 
-    npm bin	
+    npm bin
+    
+    --lists all installed packages
+    npm list
+    --removes packages not depended on by your project according to your package.json
+    npm prune
+    --tells you which installed packages are outdated with respect to what is current in the npm registry but allowable by the version definition in your package.json
+    npm outdated
+
 
 ### REST API Details
 
