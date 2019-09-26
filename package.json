@@ -2,8 +2,9 @@
   "name": "student_log",
   "version": "1.0.0",
   "description": "API",
-  "main": "index.js",
+  "main": "student_log.js",
   "scripts": {
+    "start": "node student_log.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -11,7 +12,7 @@
   "dependencies": {
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
-    "mongoose": "^4.4.19"
+    "mongoose": "^4.13.19"
   },
   "devDependencies": {},
   "repository": {
