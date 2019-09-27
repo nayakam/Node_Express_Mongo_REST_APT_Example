@@ -3,8 +3,11 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var app = express();
 //var url = 'mongodb://marassia/studnetlog';
-var url = 'mongodb://test:password@ds243055.mlab.com:43055/studentlog';
+var url = 'mongodb://nayakam:test1234@ds243055.mlab.com:43055/studentlog';
 var Schema = mongoose.Schema;
+
+const MongoClient = require('mongodb').MongoClient;
+const assert = require('assert');
 
 // create a schema
 var studentSchema = new mongoose.Schema({
@@ -23,13 +26,34 @@ app.get('/', function (req, res) {
     res.send('Hello SmartLog!');
 });
 
-mongoose.connect(url, (err, db) => {
-    if (err) {
-        console.error(err);
-        throw err
-    } else {
-        console.log("Database connected correctly to server");
-    }
+// try {
+//     mongoose.connect(url, (err, db) => {
+//         if (err) {
+//             console.error(err);
+//             throw err
+//         } else {
+//             console.log("Database connected correctly to server");
+//         }
+//     });
+// } catch (e) {
+//     console.log('Failed to connect to DB: ' + e);
+// }
+
+//mongoose.connect(url);
+
+
+MongoClient.connect(url, { useNewUrlParser: true }, (err, db) => {
+    assert.strictEqual(null, err);
+    // ...
+    db.close();
+});
+
+mongoose.connection.on('error', function(error) {
+    console.error('Database connection error:', error);
+});
+
+mongoose.connection.once('open', function() {
+    console.log('Database connected');
 });
 
 app.listen(3001, function () {
